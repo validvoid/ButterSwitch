@@ -4,5 +4,37 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ButterSwitch"
     RequestedTheme="Light">
+    <Application.Resources>
+        <Style x:Key="ButterToggleSwitchStyle1" TargetType="local:ButterToggleSwitch" >
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="local:ButterToggleSwitch">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" MinWidth="24"/>
+                                <ColumnDefinition Width="48"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto" MinHeight="48"/>
+                            </Grid.RowDefinitions>
+                            <ContentControl x:Name="HeaderContentControl" Content="{TemplateBinding HeaderContent}" Grid.ColumnSpan="2"/>
+                            <ContentControl x:Name="MainContentControl" Content="{TemplateBinding HeaderContent}" Grid.Column="0" Grid.Row="1" VerticalContentAlignment="Center" />
+                            <Grid Grid.Row="1" Grid.Column="1">
+                                <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Path Data="M1,13 C1,6.37258 6.37258,1 13,1 L44,1 C50.6274,1 56,6.37258 56,13 L56,44 C56,50.6274 50.6274,56 44,56 L13,56 C6.37258,56 1,50.6274 1,44 z" Fill="{StaticResource ButterFill}" HorizontalAlignment="Left" Height="57" Stretch="Fill" Stroke="{StaticResource ButterStroke}" StrokeThickness="2" VerticalAlignment="Top" Width="57" UseLayoutRounding="False"/>
+                                    <Path Data="M325.972,288.342 C325.972,288.342 324.505,276.486 336.59,275.612" HorizontalAlignment="Left" Height="14.692" Margin="5.894,4.586,0,0" Stretch="Fill" Stroke="White" StrokeThickness="4" UseLayoutRounding="False" VerticalAlignment="Top" Width="12.703" StrokeStartLineCap="Round" StrokeEndLineCap="Round"/>
+                                    <Path Data="M4,2 C4,3.10457 3.10457,4 2,4 C0.895431,4 0,3.10457 0,2 C0,0.895431 0.895431,0 2,0 C3.10457,0 4,0.895431 4,2 z" Fill="White" HorizontalAlignment="Left" Height="4" Margin="6,22,0,0" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" StrokeThickness="0" VerticalAlignment="Top" Width="4" UseLayoutRounding="False" />
+                                    <Path Data="M6,3 C6,4.65685 4.65685,6 3,6 C1.34315,6 0,4.65685 0,3 C0,1.34315 1.34315,0 3,0 C4.65685,0 6,1.34315 6,3 z" Fill="{StaticResource ButterStroke}" HorizontalAlignment="Left" Height="6" Margin="16.5,17,0,0" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" StrokeThickness="0" VerticalAlignment="Top" Width="6" UseLayoutRounding="False"/>
+                                    <Path Data="M6,3 C6,4.65685 4.65685,6 3,6 C1.34315,6 0,4.65685 0,3 C0,1.34315 1.34315,0 3,0 C4.65685,0 6,1.34315 6,3 z" Fill="{StaticResource ButterStroke}" HorizontalAlignment="Left" Height="6" Margin="36.5,17,0,0" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" StrokeThickness="0" VerticalAlignment="Top" Width="6" UseLayoutRounding="False"/>
+                                    <Path Data="M39.5,20 C39.5,30.2173 30.9934,38.5 20.5,38.5 C10.0066,38.5 1.5,30.2173 1.5,20" HorizontalAlignment="Left" Height="15.834" Margin="13.903,30.333,0,0" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="{StaticResource ButterStroke}" StrokeThickness="2" VerticalAlignment="Top" Width="30.194" UseLayoutRounding="False" />
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Application.Resources>
 
 </Application>

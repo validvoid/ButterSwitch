@@ -25,6 +25,7 @@ namespace ButterSwitch
         public MainPage()
         {
             this.InitializeComponent();
+            
         }
     }
 }
