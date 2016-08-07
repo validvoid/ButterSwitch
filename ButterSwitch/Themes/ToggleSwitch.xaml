@@ -1,0 +1,401 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ButterSwitch"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:foundation="using:Windows.Foundation">
+    <SolidColorBrush x:Key="ButterFill" Color="#FFFDF187"/>
+    <SolidColorBrush x:Key="ButterStroke" Color="#FFEDD976"/>
+    <SolidColorBrush x:Key="PrimaryForeground" Color="#FF4B4B4B"/>
+    <SolidColorBrush x:Key="SecondaryForeground" Color="#FF878787"/>
+    <SolidColorBrush x:Key="ButterBackgroud" Color="#FFFFF6CE"/>
+    <Style x:Key="ButterToggleSwitchStyle" TargetType="ToggleSwitch">
+        <Setter Property="Foreground" Value="{ThemeResource ToggleSwitchContentForeground}"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
+        <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}"/>
+        <Setter Property="MinWidth" Value="154"/>
+        <Setter Property="ManipulationMode" Value="System,TranslateX"/>
+        <Setter Property="UseSystemFocusVisuals" Value="True"/>
+        <Setter Property="FocusVisualMargin" Value="-7,-3,-7,-3"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleSwitch">
+                    <Grid BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition MaxWidth="12" Width="12"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="10"/>
+                        </Grid.RowDefinitions>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="PointerOver"/>
+                                <VisualState x:Name="Pressed"/>
+                                <VisualState x:Name="Disabled"/>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="ToggleStates">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition From="Off" GeneratedDuration="0" To="On">
+                                        <VisualTransition.Storyboard>
+                                            <Storyboard>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="SwitchKnob">
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-10">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseOut"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseOut"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="78">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseOut"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="SwitchKnob">
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-15">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" To="14.2801,9.75747" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Storyboard.TargetName="path">
+                                                    <PointAnimation.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </PointAnimation.EasingFunction>
+                                                </PointAnimation>
+                                                <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" To="9.55523,9.75747" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                                                    <PointAnimation.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </PointAnimation.EasingFunction>
+                                                </PointAnimation>
+                                                <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" To="18.1104,1.23483" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="path">
+                                                    <PointAnimation.EasingFunction>
+                                                        <CircleEase EasingMode="EaseOut"/>
+                                                    </PointAnimation.EasingFunction>
+                                                </PointAnimation>
+                                                <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" To="1,1.23483" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                                                    <PointAnimation.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </PointAnimation.EasingFunction>
+                                                </PointAnimation>
+                                                <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" To="4.83031,9.75747" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Storyboard.TargetName="path">
+                                                    <PointAnimation.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </PointAnimation.EasingFunction>
+                                                </PointAnimation>
+
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="RctTrailMask">
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseOut"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:1.2" Value="1"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="PthDropRightA">
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:0.8" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="PthDropRightB">
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:0.8" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="PthDropRightA">
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="2"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="PthDropRightA">
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="5"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="5"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="2"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="PthDropRightB">
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="2"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="PthDropRightB">
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="-5"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-5"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-2"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="PthTrail">
+                                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimation To="0" Duration="0" Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="PthTrail"/>
+                                            </Storyboard>
+                                        </VisualTransition.Storyboard>
+                                    </VisualTransition>
+                                    <VisualTransition From="On" To="Off">
+                                        <VisualTransition.Storyboard>
+                                            <Storyboard>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="SwitchKnob">
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="78"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="88">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseOut"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="78">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseOut"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseOut"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="SwitchKnob">
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="15">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" To="14.2801,1" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Storyboard.TargetName="path">
+                                                    <PointAnimation.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </PointAnimation.EasingFunction>
+                                                </PointAnimation>
+                                                <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" To="9.55523,1" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                                                    <PointAnimation.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </PointAnimation.EasingFunction>
+                                                </PointAnimation>
+                                                <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" To="18.1104, 7.68004" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="path">
+                                                    <PointAnimation.EasingFunction>
+                                                        <CircleEase EasingMode="EaseOut"/>
+                                                    </PointAnimation.EasingFunction>
+                                                </PointAnimation>
+                                                <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" To="1,7.68004" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                                                    <PointAnimation.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </PointAnimation.EasingFunction>
+                                                </PointAnimation>
+                                                <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" To="4.83031,1" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Storyboard.TargetName="path">
+                                                    <PointAnimation.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </PointAnimation.EasingFunction>
+                                                </PointAnimation>
+
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="RctTrailMask">
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseOut"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:1.2" Value="1"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="PthDropLeftA">
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:0.8" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="PthDropLeftB">
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:0.8" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="PthDropLeftA">
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-2"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="PthDropLeftA">
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="5"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="5"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="2"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="PthDropLeftB">
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-2"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="PthDropLeftB">
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="-5"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-5"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-2"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="PthTrail">
+                                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimation To="180" Duration="0" Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="PthTrail"/>
+                                            </Storyboard>
+                                        </VisualTransition.Storyboard>
+                                    </VisualTransition>
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="Off">
+                                    <VisualState.Setters>
+                                        <Setter Target="RctTrailMask.(UIElement.RenderTransformOrigin)">
+                                            <Setter.Value>
+                                                <foundation:Point>0,0.5</foundation:Point>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Setter Target="PthTrail.(UIElement.Projection).(PlaneProjection.RotationY)" Value="180"/>
+                                        <Setter Target="SwitchKnob.(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Value="0"/>
+                                        <Setter Target="path.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Value="14.2801,1"/>
+                                        <Setter Target="path.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Value="9.55523,1"/>
+                                        <Setter Target="path.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Value="18.1104, 7.68004"/>
+                                        <Setter Target="path.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Value="1, 7.68004"/>
+                                        <Setter Target="path.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Value="4.83031,1"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="On">
+                                    <VisualState.Setters>
+                                        <Setter Target="RctTrailMask.(UIElement.RenderTransformOrigin)">
+                                            <Setter.Value>
+                                                <foundation:Point>1,0.5</foundation:Point>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Setter Target="PthTrail.(UIElement.Projection).(PlaneProjection.RotationY)" Value="0"/>
+                                        <Setter Target="SwitchKnob.(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Value="78"/>
+                                        <Setter Target="path.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Value="14.2801,9.75747"/>
+                                        <Setter Target="path.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Value="9.55523,9.75747"/>
+                                        <Setter Target="path.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Value="18.1104,1.23483"/>
+                                        <Setter Target="path.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Value="1,1.23483"/>
+                                        <Setter Target="path.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Value="4.83031,9.75747"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="ContentStates">
+                                <VisualState x:Name="OffContent">
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="OffContentPresenter"/>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="IsHitTestVisible" Storyboard.TargetName="OffContentPresenter">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <x:Boolean>True</x:Boolean>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="OnContent">
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="OnContentPresenter"/>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="IsHitTestVisible" Storyboard.TargetName="OnContentPresenter">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <x:Boolean>True</x:Boolean>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <ContentPresenter x:Name="HeaderContentPresenter" AutomationProperties.AccessibilityView="Raw" Grid.ColumnSpan="4" ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}" Foreground="{ThemeResource ToggleSwitchHeaderForeground}" IsHitTestVisible="False" Visibility="Collapsed" x:DeferLoadStrategy="Lazy"/>
+                        <Grid x:Name="SwitchAreaGrid" Background="{ThemeResource ToggleSwitchContainerBackground}" Grid.ColumnSpan="3" Control.IsTemplateFocusTarget="True" Margin="0,5" Grid.Row="1" Grid.RowSpan="3"/>
+                        <ContentPresenter x:Name="OffContentPresenter" AutomationProperties.AccessibilityView="Raw" ContentTemplate="{TemplateBinding OffContentTemplate}" Content="{TemplateBinding OffContent}" Grid.Column="2" Foreground="{TemplateBinding Foreground}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" IsHitTestVisible="False" Opacity="0" Grid.Row="1" Grid.RowSpan="3" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        <ContentPresenter x:Name="OnContentPresenter" AutomationProperties.AccessibilityView="Raw" ContentTemplate="{TemplateBinding OnContentTemplate}" Content="{TemplateBinding OnContent}" Grid.Column="2" Foreground="{TemplateBinding Foreground}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" IsHitTestVisible="False" Opacity="0" Grid.Row="1" Grid.RowSpan="3" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        <Rectangle x:Name="OuterBorder" Fill="{ThemeResource ButterBackgroud}" Height="42" RadiusY="10" Grid.Row="2" RadiusX="10" Stroke="{ThemeResource ToggleSwitchStrokeOff}" StrokeThickness="0"/>
+                        <Rectangle x:Name="SwitchKnobBounds" Fill="{ThemeResource ToggleSwitchFillOn}" Height="42" Opacity="0" RadiusY="10" Grid.Row="2" RadiusX="10" Stroke="{ThemeResource ToggleSwitchStrokeOn}" StrokeThickness="{ThemeResource ToggleSwitchOnStrokeThickness}" Width="120"/>
+
+                        <Path x:Name="PthTrail" Data="M30.7736,1 L70.2264,1 C73.4151,1 76,3.05949 76,5.6 C76,6.79087 75.432,7.87603 74.5001,8.69294 L74.3481,8.82 L74.5001,8.94707 C75.432,9.76397 76,10.8492 76,12.04 C76,13.469 75.1821,14.7459 73.899,15.5895 L73.6907,15.72 L73.899,15.8505 C75.1821,16.6941 76,17.971 76,19.4 C76,21.9405 73.4151,24 70.2264,24 L54.8302,24 C51.6415,24 49.0566,21.9405 49.0566,19.4 C49.0566,18.3679 49.4832,17.4152 50.2036,16.6477 L50.2112,16.64 L39.434,16.64 C36.2453,16.64 33.6604,14.5805 33.6604,12.04 C33.6604,11.4048 33.8219,10.7998 34.1141,10.2495 L34.1422,10.2 L30.7736,10.2 C27.5849,10.2 25,8.14051 25,5.6 C25,3.05949 27.5849,1 30.7736,1 z M25,21.5 C25,20.2419 26.3431,19.222 28,19.222 L33,19.222 C34.6569,19.222 36,20.2419 36,21.5 C36,22.7581 34.6569,23.778 33,23.778 L28,23.778 C26.3431,23.778 25,22.7581 25,21.5 z M1,5.00001 C1,3.71153 2.79086,2.66701 5,2.66701 L12,2.66701 C14.2091,2.66701 16,3.71153 16,5.00001 C16,6.28848 14.2091,7.33301 12,7.33301 L5,7.33301 C2.79086,7.33301 1,6.28848 1,5.00001 z" Fill="{StaticResource ButterFill}" Height="20" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="{StaticResource ButterStroke}" StrokeThickness="2" UseLayoutRounding="False" VerticalAlignment="Center"  HorizontalAlignment="Center" Width="56" IsHitTestVisible="False" Grid.Row="2">
+                            <Path.Projection>
+                                <PlaneProjection/>
+                            </Path.Projection>
+                            <Path.RenderTransform>
+                                <CompositeTransform/>
+                            </Path.RenderTransform>
+                        </Path>
+                        <Rectangle x:Name="RctTrailMask" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeThickness="2" Fill="{StaticResource ButterBackgroud}" Margin="4"  Width="78" IsHitTestVisible="False" Grid.Row="2" RenderTransformOrigin="0.5,0.5">
+                            <Rectangle.RenderTransform>
+                                <CompositeTransform/>
+                            </Rectangle.RenderTransform>
+                        </Rectangle>
+                        <Path x:Name="PthDropLeftA" Data="M176.293,32.4683 C175.517,37.7952 174.517,16.7414 183.141,19.0244 C191.765,21.3073 177.069,27.1413 176.293,32.4683 z" Fill="{StaticResource ButterFill}" HorizontalAlignment="Left" Height="10" Stretch="Fill" Stroke="{StaticResource ButterStroke}" UseLayoutRounding="False" VerticalAlignment="Top" Width="7" Margin="-3,-2,0,0" RenderTransformOrigin="0.5,0.5" Opacity="0" IsHitTestVisible="False" Grid.Row="2">
+                            <Path.RenderTransform>
+                                <CompositeTransform ScaleX="-1" TranslateY="5"/>
+                            </Path.RenderTransform>
+                        </Path>
+                        <Path x:Name="PthDropLeftB" Data="M176.293,32.4683 C175.517,37.7952 174.517,16.7414 183.141,19.0244 C191.765,21.3073 177.069,27.1413 176.293,32.4683 z" Fill="{StaticResource ButterFill}" HorizontalAlignment="Left" Height="10" Stretch="Fill" Stroke="{StaticResource ButterStroke}" UseLayoutRounding="False" VerticalAlignment="Bottom" Width="7" Margin="-3,0,0,-2" RenderTransformOrigin="0.5,0.5" Opacity="0" IsHitTestVisible="False" Grid.Row="2">
+                            <Path.RenderTransform>
+                                <CompositeTransform ScaleY="-1" ScaleX="-1" TranslateY="-5"/>
+                            </Path.RenderTransform>
+                        </Path>
+                        <Path x:Name="PthDropRightA" Data="M176.293,32.4683 C175.517,37.7952 174.517,16.7414 183.141,19.0244 C191.765,21.3073 177.069,27.1413 176.293,32.4683 z" Fill="{StaticResource ButterFill}" HorizontalAlignment="Right" Height="10" Stretch="Fill" Stroke="{StaticResource ButterStroke}" UseLayoutRounding="False" VerticalAlignment="Top" Width="7" Margin="0,-2,-3,0" RenderTransformOrigin="0.5,0.5" Opacity="0" IsHitTestVisible="False" Grid.Row="2">
+                            <Path.RenderTransform>
+                                <CompositeTransform TranslateY="5"/>
+                            </Path.RenderTransform>
+                        </Path>
+                        <Path x:Name="PthDropRightB" Data="M176.293,32.4683 C175.517,37.7952 174.517,16.7414 183.141,19.0244 C191.765,21.3073 177.069,27.1413 176.293,32.4683 z" Fill="{StaticResource ButterFill}" HorizontalAlignment="Right" Height="10" Stretch="Fill" Stroke="{StaticResource ButterStroke}" UseLayoutRounding="False" VerticalAlignment="Bottom" Width="7" Margin="0,0,-3,-2" RenderTransformOrigin="0.5,0.5" Opacity="0" IsHitTestVisible="False" Grid.Row="2">
+                            <Path.RenderTransform>
+                                <CompositeTransform ScaleY="-1" TranslateY="-5"/>
+                            </Path.RenderTransform>
+                        </Path>
+
+                        <Grid x:Name="SwitchKnob" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="4,0" Grid.Row="2">
+                            <Grid.RenderTransform>
+                                <CompositeTransform/>
+                            </Grid.RenderTransform>
+                            <Path Data="M1,13 C1,6.37258 6.37258,1 13,1 L44,1 C50.6274,1 56,6.37258 56,13 L56,44 C56,50.6274 50.6274,56 44,56 L13,56 C6.37258,56 1,50.6274 1,44 z" Fill="{StaticResource ButterFill}" HorizontalAlignment="Left" Height="34" Stretch="Fill" Stroke="{StaticResource ButterStroke}" StrokeThickness="2" VerticalAlignment="Top" Width="34" UseLayoutRounding="False" IsHitTestVisible="False"/>
+                            <Path Data="M325.972,288.342 C325.972,288.342 324.505,276.486 336.59,275.612" Stretch="Fill" Stroke="White" StrokeThickness="4" UseLayoutRounding="False" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Width="7.577" Height="8.765" HorizontalAlignment="Left" Margin="3.516,2.735,0,0" VerticalAlignment="Top" IsHitTestVisible="False"/>
+                            <Path Data="M4,2 C4,3.10457 3.10457,4 2,4 C0.895431,4 0,3.10457 0,2 C0,0.895431 0.895431,0 2,0 C3.10457,0 4,0.895431 4,2 z" Fill="White" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" StrokeThickness="0" UseLayoutRounding="False" Width="2.386" Height="2.386" HorizontalAlignment="Left" Margin="3.578,13.123,0,0" VerticalAlignment="Top" IsHitTestVisible="False" />
+                            <Path Data="M6,3 C6,4.65685 4.65685,6 3,6 C1.34315,6 0,4.65685 0,3 C0,1.34315 1.34315,0 3,0 C4.65685,0 6,1.34315 6,3 z" Fill="{StaticResource ButterStroke}" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" StrokeThickness="0" UseLayoutRounding="False" Width="3.579" Height="3.578" HorizontalAlignment="Left" Margin="9.842,10.141,0,0" VerticalAlignment="Top" IsHitTestVisible="False"/>
+                            <Path Data="M6,3 C6,4.65685 4.65685,6 3,6 C1.34315,6 0,4.65685 0,3 C0,1.34315 1.34315,0 3,0 C4.65685,0 6,1.34315 6,3 z" Fill="{StaticResource ButterStroke}" HorizontalAlignment="Left" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" StrokeThickness="0" UseLayoutRounding="False" Width="3.579" Height="3.578" Margin="21.772,10.141,0,0" VerticalAlignment="Top" IsHitTestVisible="False"/>
+                            <Path x:Name="path" HorizontalAlignment="Left" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stroke="{StaticResource ButterStroke}" StrokeThickness="2" VerticalAlignment="Top" UseLayoutRounding="False" Width="19.111" Height="10.218" Margin="7.743,17.32,0,0" IsHitTestVisible="False" >
+                                <Path.Data>
+                                    <PathGeometry FillRule="EvenOdd">
+                                        <PathFigure IsFilled="True" IsClosed="False" StartPoint="18.1104,7.68004">
+                                            <BezierSegment Point3="9.55522,1" Point2="14.2801,1" Point1="18.1104,5.94177"/>
+                                            <BezierSegment Point3="1,7.68004" Point2="1,5.94177" Point1="4.83031,1"/>
+                                        </PathFigure>
+                                    </PathGeometry>
+                                </Path.Data>
+                            </Path>
+                        </Grid>
+
+                        <Thumb x:Name="SwitchThumb" AutomationProperties.AccessibilityView="Raw" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="3">
+                            <Thumb.Template>
+                                <ControlTemplate TargetType="Thumb">
+                                    <Rectangle Fill="Transparent"/>
+                                </ControlTemplate>
+                            </Thumb.Template>
+                        </Thumb>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
