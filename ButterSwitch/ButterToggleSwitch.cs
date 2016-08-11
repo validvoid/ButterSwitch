@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Data;
@@ -148,31 +149,49 @@ namespace ButterSwitch
         public ButterToggleSwitch()
         {
             this.DefaultStyleKey = typeof(ButterToggleSwitch);
+
         }
 
-        private Storyboard _sbOn2Off, _sbOff2On;
+        private VisualStateGroup _toggleStatesGroup;
         private Grid _grdGraphics;
+
+        private bool _isAnimationOnRunning;
 
         protected override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
-            _sbOn2Off = GetTemplateChild("SbOn2Off") as Storyboard;
-            _sbOff2On = GetTemplateChild("SbOff2On") as Storyboard;
-            _grdGraphics = GetTemplateChild("GrdGraphics") as Grid;
 
-            _sbOn2Off.Completed += OnSbCompleted;
-            _sbOff2On.Completed += OnSbCompleted;
+            _grdGraphics = GetTemplateChild("GrdGraphics") as Grid;
+            _toggleStatesGroup = GetTemplateChild("ToggleStates") as VisualStateGroup;
+
+            _toggleStatesGroup.CurrentStateChanged += _toggleStatesGroup_CurrentStateChanged;
             _grdGraphics.Tapped += _grdGraphics_Tapped;
+
+            if (this.IsOn)
+            {
+                VisualStateManager.GoToState(this, "On", false);
+                _isAnimationOnRunning = false;
+
+            }
+            else
+            {
+                VisualStateManager.GoToState(this, "Off", false);
+                _isAnimationOnRunning = false;
+            }
+
+            Toggled?.Invoke(this, new RoutedEventArgs());
+        }
+
+        private void _toggleStatesGroup_CurrentStateChanged(object sender, VisualStateChangedEventArgs e)
+        {
+            _isAnimationOnRunning = false;
+            Toggled?.Invoke(this, new RoutedEventArgs());
         }
 
         private void _grdGraphics_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            IsOn = !IsOn;
-        }
-
-        private void OnSbCompleted(object sender, object e)
-        {
-            Toggled?.Invoke(this, new RoutedEventArgs());
+            if (!_isAnimationOnRunning)
+                IsOn = !IsOn;
         }
 
         private static void OnToggled(DependencyObject d, DependencyPropertyChangedEventArgs e)
@@ -188,13 +207,18 @@ namespace ButterSwitch
             if (instance == null)
                 return;
 
+            bool useAnimation = !DesignMode.DesignModeEnabled;
+
             if (instance.IsOn)
             {
-                instance._sbOff2On.Begin();
+                instance._isAnimationOnRunning = true;
+                VisualStateManager.GoToState(instance, "On", useAnimation);
+
             }
             else
             {
-                instance._sbOn2Off.Begin();
+                instance._isAnimationOnRunning = true;
+                VisualStateManager.GoToState(instance, "Off", useAnimation);
             }
         }
     }

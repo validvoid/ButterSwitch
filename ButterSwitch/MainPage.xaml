@@ -5,7 +5,7 @@
     xmlns:local="using:ButterSwitch"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" d:DesignWidth="372" d:DesignHeight="195">
+    mc:Ignorable="d" d:DesignWidth="421.5" d:DesignHeight="290">
     <Page.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -15,8 +15,8 @@
     </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel>
-            <local:ButterToggleSwitch HorizontalAlignment="Center" VerticalAlignment="Center" Margin="36"/>
-            <ToggleSwitch Style="{StaticResource ButterToggleSwitchStyle}"  Header="Herder" HorizontalAlignment="Center"></ToggleSwitch>
+            <local:ButterToggleSwitch x:Name="butterToggleSwitch" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="36" IsOn="True"/>
+            <ToggleSwitch Style="{StaticResource ButterToggleSwitchStyle}"  Header="Header" HorizontalAlignment="Center" IsOn="{Binding IsOn, ElementName=butterToggleSwitch}"></ToggleSwitch>
         </StackPanel>
     </Grid>
 </Page>
