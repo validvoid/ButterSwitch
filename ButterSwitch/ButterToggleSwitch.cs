@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
+using Windows.Devices.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Data;
@@ -182,6 +183,7 @@ namespace ButterSwitch
                 return;
 
             _toggleStatesGroup.CurrentStateChanged += _toggleStatesGroup_CurrentStateChanged;
+            _toggleStatesGroup.CurrentStateChanging += (sender, args) => { _isAnimationOnRunning = true; };
             _grdGraphics.Tapped += _grdGraphics_Tapped;
             _grdGraphics.PointerEntered += _grdGraphics_PointerEntered;
             _grdGraphics.PointerExited += _grdGraphics_PointerExited;
@@ -189,13 +191,10 @@ namespace ButterSwitch
             if (this.IsOn)
             {
                 VisualStateManager.GoToState(this, "On", false);
-                _isAnimationOnRunning = false;
-
             }
             else
             {
                 VisualStateManager.GoToState(this, "Off", false);
-                _isAnimationOnRunning = false;
             }
 
             Toggled?.Invoke(this, new RoutedEventArgs());
@@ -206,15 +205,19 @@ namespace ButterSwitch
             if (!IsEnabled)
                 return;
 
-            if (this.IsOn)
+            if (e.Pointer.PointerDeviceType == PointerDeviceType.Touch)
+                return;
+
+            if (_isAnimationOnRunning)
+                return;
+
+            if (_toggleStatesGroup.CurrentState.Name == "OnHover")
             {
                 VisualStateManager.GoToState(this, "On", true);
-                _isAnimationOnRunning = false;
             }
-            else
+            else if (_toggleStatesGroup.CurrentState.Name == "OffHover")
             {
                 VisualStateManager.GoToState(this, "Off", true);
-                _isAnimationOnRunning = false;
             }
         }
 
@@ -223,11 +226,17 @@ namespace ButterSwitch
             if (!IsEnabled)
                 return;
 
-            if (this.IsOn)
+            if (e.Pointer.PointerDeviceType == PointerDeviceType.Touch)
+                return;
+
+            if (_isAnimationOnRunning)
+                return;
+
+            if (_toggleStatesGroup.CurrentState.Name == "On")
             {
                 VisualStateManager.GoToState(this, "OnHover", true);
             }
-            else
+            else if (_toggleStatesGroup.CurrentState.Name == "Off")
             {
                 VisualStateManager.GoToState(this, "OffHover", true);
             }
@@ -266,19 +275,16 @@ namespace ButterSwitch
                 if (instance.IsOn)
                 {
                     VisualStateManager.GoToState(instance, "On", false);
-                    instance._isAnimationOnRunning = false;
 
                 }
                 else
                 {
                     VisualStateManager.GoToState(instance, "Off", false);
-                    instance._isAnimationOnRunning = false;
                 }
             }
             else
             {
                 VisualStateManager.GoToState(instance, "Disabled", false);
-                instance._isAnimationOnRunning = false;
             }
         }
 
@@ -299,13 +305,10 @@ namespace ButterSwitch
 
             if (instance.IsOn)
             {
-                instance._isAnimationOnRunning = true;
                 VisualStateManager.GoToState(instance, "On", useAnimation);
-
             }
             else
             {
-                instance._isAnimationOnRunning = true;
                 VisualStateManager.GoToState(instance, "Off", useAnimation);
             }
         }
