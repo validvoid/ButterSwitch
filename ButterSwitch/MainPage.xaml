@@ -31,15 +31,3 @@
         <CheckBox x:Name="checkBoxBuiltin" Content="IsEnabled" HorizontalAlignment="Center" VerticalAlignment="Stretch" Grid.Row="2" Margin="0,12" Grid.Column="1" IsChecked="True"/>
     </Grid>
 </Page>
-
-                <ResourceDictionary Source="/Themes/ToggleSwitch.xaml"></ResourceDictionary>
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Page.Resources>
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel>
-            <local:ButterToggleSwitch x:Name="butterToggleSwitch" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="36" IsOn="True"/>
-            <ToggleSwitch Style="{StaticResource ButterToggleSwitchStyle}"  Header="Header" HorizontalAlignment="Center" IsOn="{Binding IsOn, ElementName=butterToggleSwitch}"></ToggleSwitch>
-        </StackPanel>
-    </Grid>
-</Page>
