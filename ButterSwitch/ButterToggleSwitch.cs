@@ -209,11 +209,12 @@ namespace ButterSwitch
             if (this.IsOn)
             {
                 VisualStateManager.GoToState(this, "On", true);
+                _isAnimationOnRunning = false;
             }
             else
             {
-                _isAnimationOnRunning = true;
                 VisualStateManager.GoToState(this, "Off", true);
+                _isAnimationOnRunning = false;
             }
         }
 
@@ -228,7 +229,6 @@ namespace ButterSwitch
             }
             else
             {
-                _isAnimationOnRunning = true;
                 VisualStateManager.GoToState(this, "OffHover", true);
             }
         }
