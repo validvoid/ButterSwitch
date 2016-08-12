@@ -53,7 +53,7 @@
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="ToggleStates">
                                 <VisualStateGroup.Transitions>
-                                    <VisualTransition x:Name="VTOff2On" From="Off" GeneratedDuration="0" To="On">
+                                    <VisualTransition From="Off" GeneratedDuration="0" To="On">
                                         <VisualTransition.Storyboard>
                                             <Storyboard>
                                                 <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="GrdButter">
@@ -247,7 +247,7 @@
                                             </Storyboard>
                                         </VisualTransition.Storyboard>
                                     </VisualTransition>
-                                    <VisualTransition  x:Name="VTOn2Off" From="On" To="Off">
+                                    <VisualTransition From="On" To="Off">
                                         <VisualTransition.Storyboard>
                                             <Storyboard>
                                                 <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="GrdButter">
@@ -434,6 +434,849 @@
                                             </Storyboard>
                                         </VisualTransition.Storyboard>
                                     </VisualTransition>
+                                    <VisualTransition From="Off" GeneratedDuration="0" To="OffHover">
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="path1">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="0">
+                                                    <EasingDoubleKeyFrame.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </EasingDoubleKeyFrame.EasingFunction>
+                                                </EasingDoubleKeyFrame>
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-2">
+                                                    <EasingDoubleKeyFrame.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </EasingDoubleKeyFrame.EasingFunction>
+                                                </EasingDoubleKeyFrame>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="path2">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="0">
+                                                    <EasingDoubleKeyFrame.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </EasingDoubleKeyFrame.EasingFunction>
+                                                </EasingDoubleKeyFrame>
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-2">
+                                                    <EasingDoubleKeyFrame.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </EasingDoubleKeyFrame.EasingFunction>
+                                                </EasingDoubleKeyFrame>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Storyboard.TargetName="path">
+                                                <EasingPointKeyFrame KeyTime="0" Value="14.2801,1.05016">
+                                                    <EasingPointKeyFrame.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </EasingPointKeyFrame.EasingFunction>
+                                                </EasingPointKeyFrame>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="11.0136,1">
+                                                    <EasingPointKeyFrame.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </EasingPointKeyFrame.EasingFunction>
+                                                </EasingPointKeyFrame>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                                                <EasingPointKeyFrame KeyTime="0" Value="9.55522,1.05016">
+                                                    <EasingPointKeyFrame.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </EasingPointKeyFrame.EasingFunction>
+                                                </EasingPointKeyFrame>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="6.28875,1">
+                                                    <EasingPointKeyFrame.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </EasingPointKeyFrame.EasingFunction>
+                                                </EasingPointKeyFrame>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Storyboard.TargetName="path">
+                                                <EasingPointKeyFrame KeyTime="0" Value="4.83031,1.05016">
+                                                    <EasingPointKeyFrame.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </EasingPointKeyFrame.EasingFunction>
+                                                </EasingPointKeyFrame>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="1.56384,1">
+                                                    <EasingPointKeyFrame.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </EasingPointKeyFrame.EasingFunction>
+                                                </EasingPointKeyFrame>
+                                            </PointAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualTransition>
+                                    <VisualTransition From="OffHover" GeneratedDuration="0" To="Off">
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="path1">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="-2">
+                                                    <EasingDoubleKeyFrame.EasingFunction>
+                                                        <CubicEase EasingMode="EaseIn"/>
+                                                    </EasingDoubleKeyFrame.EasingFunction>
+                                                </EasingDoubleKeyFrame>
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0">
+                                                    <EasingDoubleKeyFrame.EasingFunction>
+                                                        <CubicEase EasingMode="EaseIn"/>
+                                                    </EasingDoubleKeyFrame.EasingFunction>
+                                                </EasingDoubleKeyFrame>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="path2">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="-2">
+                                                    <EasingDoubleKeyFrame.EasingFunction>
+                                                        <CubicEase EasingMode="EaseIn"/>
+                                                    </EasingDoubleKeyFrame.EasingFunction>
+                                                </EasingDoubleKeyFrame>
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0">
+                                                    <EasingDoubleKeyFrame.EasingFunction>
+                                                        <CubicEase EasingMode="EaseIn"/>
+                                                    </EasingDoubleKeyFrame.EasingFunction>
+                                                </EasingDoubleKeyFrame>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Storyboard.TargetName="path">
+                                                <EasingPointKeyFrame KeyTime="0" Value="11.0136,1">
+                                                    <EasingPointKeyFrame.EasingFunction>
+                                                        <CubicEase EasingMode="EaseIn"/>
+                                                    </EasingPointKeyFrame.EasingFunction>
+                                                </EasingPointKeyFrame>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="14.2801,1.05016">
+                                                    <EasingPointKeyFrame.EasingFunction>
+                                                        <CubicEase EasingMode="EaseIn"/>
+                                                    </EasingPointKeyFrame.EasingFunction>
+                                                </EasingPointKeyFrame>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                                                <EasingPointKeyFrame KeyTime="0" Value="6.28875,1">
+                                                    <EasingPointKeyFrame.EasingFunction>
+                                                        <CubicEase EasingMode="EaseIn"/>
+                                                    </EasingPointKeyFrame.EasingFunction>
+                                                </EasingPointKeyFrame>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="9.55522,1.05016">
+                                                    <EasingPointKeyFrame.EasingFunction>
+                                                        <CubicEase EasingMode="EaseIn"/>
+                                                    </EasingPointKeyFrame.EasingFunction>
+                                                </EasingPointKeyFrame>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Storyboard.TargetName="path">
+                                                <EasingPointKeyFrame KeyTime="0" Value="1.56384,1">
+                                                    <EasingPointKeyFrame.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </EasingPointKeyFrame.EasingFunction>
+                                                </EasingPointKeyFrame>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="4.83031,1.05016">
+                                                    <EasingPointKeyFrame.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </EasingPointKeyFrame.EasingFunction>
+                                                </EasingPointKeyFrame>
+                                            </PointAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualTransition>
+                                    <VisualTransition From="On" GeneratedDuration="0" To="OnHover">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" To="70" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="GrdButter" d:IsOptimized="True">
+                                                <DoubleAnimation.EasingFunction>
+                                                    <QuarticEase EasingMode="EaseIn"/>
+                                                </DoubleAnimation.EasingFunction>
+                                            </DoubleAnimation>
+                                            <DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="GrdButter" d:IsOptimized="True">
+                                                <DoubleAnimation.EasingFunction>
+                                                    <QuarticEase EasingMode="EaseIn"/>
+                                                </DoubleAnimation.EasingFunction>
+                                            </DoubleAnimation>
+                                            <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" From="14.2801,9.75747" To="14.2801,9.75747" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Storyboard.TargetName="path">
+                                                <PointAnimation.EasingFunction>
+                                                    <CubicEase EasingMode="EaseOut"/>
+                                                </PointAnimation.EasingFunction>
+                                            </PointAnimation>
+                                            <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" From="9.55523,9.75747"  To="9.55523,9.75747" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                                                <PointAnimation.EasingFunction>
+                                                    <CubicEase EasingMode="EaseOut"/>
+                                                </PointAnimation.EasingFunction>
+                                            </PointAnimation>
+                                            <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" From="18.1104,1.23483"  To="18.1104,1.23483" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="path">
+                                                <PointAnimation.EasingFunction>
+                                                    <CircleEase EasingMode="EaseOut"/>
+                                                </PointAnimation.EasingFunction>
+                                            </PointAnimation>
+                                            <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" From="1,1.23483"  To="1,1.23483" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                                                <PointAnimation.EasingFunction>
+                                                    <CubicEase EasingMode="EaseOut"/>
+                                                </PointAnimation.EasingFunction>
+                                            </PointAnimation>
+                                            <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" From="4.83031,9.75747"  To="4.83031,9.75747" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Storyboard.TargetName="path">
+                                                <PointAnimation.EasingFunction>
+                                                    <CubicEase EasingMode="EaseOut"/>
+                                                </PointAnimation.EasingFunction>
+                                            </PointAnimation>
+                                            <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.4" From="14.2801,9.75747" To="14.3088,1.32137" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Storyboard.TargetName="pathLaugh">
+                                                <PointAnimation.EasingFunction>
+                                                    <CubicEase EasingMode="EaseOut"/>
+                                                </PointAnimation.EasingFunction>
+                                            </PointAnimation>
+                                            <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.4" From="9.55523,9.75747"  To="9.58393,1.32137" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Storyboard.TargetName="pathLaugh">
+                                                <PointAnimation.EasingFunction>
+                                                    <CubicEase EasingMode="EaseOut"/>
+                                                </PointAnimation.EasingFunction>
+                                            </PointAnimation>
+                                            <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.4" From="18.1104,1.23483"  To="18.2857,1.4169" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="pathLaugh">
+                                                <PointAnimation.EasingFunction>
+                                                    <CircleEase EasingMode="EaseOut"/>
+                                                </PointAnimation.EasingFunction>
+                                            </PointAnimation>
+                                            <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.4" From="1,1.23483"  To="1,1.32205" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Storyboard.TargetName="pathLaugh">
+                                                <PointAnimation.EasingFunction>
+                                                    <CubicEase EasingMode="EaseOut"/>
+                                                </PointAnimation.EasingFunction>
+                                            </PointAnimation>
+                                            <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.4" From="4.83031,9.75747"  To="4.85901,1.32137" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Storyboard.TargetName="pathLaugh">
+                                                <PointAnimation.EasingFunction>
+                                                    <CubicEase EasingMode="EaseOut"/>
+                                                </PointAnimation.EasingFunction>
+                                            </PointAnimation>
+                                            <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="OnContentControl" d:IsOptimized="True"/>
+                                            <DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="OffContentControl" d:IsOptimized="True"/>
+                                            <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="PthTrail" d:IsOptimized="True"/>
+                                            <DoubleAnimation To="180" Duration="0" Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="PthTrail"/>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="0,3.36899"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="0,2.38096"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point1)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="0,1.39292"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="6.09528,2.47619"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point1)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="6.09528,3.46422"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point2)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="6.09528,1.48816"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point3)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="6.09528,2.47619"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="4.03598,1.71424"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="3.04767,1.71424"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="2.05936,1.71424"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point2)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="2.05936,0"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point3)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="3.04767,0"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point1)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="4.03598,0"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="0,3.27375"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="0,2.28571"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point1)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="0,1.29768"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="6.14253,2.33333"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point1)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="6.14253,3.32136"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point2)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="6.14253,1.3453"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point3)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="6.14253,2.33333"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point2)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="1.96375,0"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point3)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="2.95206,0"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point1)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="3.94037,0"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="3.94037,1.57186"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="2.95206,1.57186"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="1.96375,1.57186"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)" Storyboard.TargetName="pathLaugh">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="8.61904,1.32205"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point1)" Storyboard.TargetName="pathLaugh">
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="13,1.36975"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="pathLaugh">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualTransition>
+                                    <VisualTransition From="OnHover" GeneratedDuration="0" To="On">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" To="70" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="GrdButter" d:IsOptimized="True">
+                                                <DoubleAnimation.EasingFunction>
+                                                    <QuarticEase EasingMode="EaseIn"/>
+                                                </DoubleAnimation.EasingFunction>
+                                            </DoubleAnimation>
+                                            <DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="GrdButter" d:IsOptimized="True">
+                                                <DoubleAnimation.EasingFunction>
+                                                    <QuarticEase EasingMode="EaseIn"/>
+                                                </DoubleAnimation.EasingFunction>
+                                            </DoubleAnimation>
+                                            <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" From="14.2801,9.75747" To="14.2801,9.75747" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Storyboard.TargetName="path">
+                                                <PointAnimation.EasingFunction>
+                                                    <CubicEase EasingMode="EaseOut"/>
+                                                </PointAnimation.EasingFunction>
+                                            </PointAnimation>
+                                            <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" From="9.55523,9.75747"  To="9.55523,9.75747" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                                                <PointAnimation.EasingFunction>
+                                                    <CubicEase EasingMode="EaseOut"/>
+                                                </PointAnimation.EasingFunction>
+                                            </PointAnimation>
+                                            <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" From="18.1104,1.23483"  To="18.1104,1.23483" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="path">
+                                                <PointAnimation.EasingFunction>
+                                                    <CircleEase EasingMode="EaseOut"/>
+                                                </PointAnimation.EasingFunction>
+                                            </PointAnimation>
+                                            <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" From="1,1.23483"  To="1,1.23483" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                                                <PointAnimation.EasingFunction>
+                                                    <CubicEase EasingMode="EaseOut"/>
+                                                </PointAnimation.EasingFunction>
+                                            </PointAnimation>
+                                            <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" From="4.83031,9.75747"  To="4.83031,9.75747" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Storyboard.TargetName="path">
+                                                <PointAnimation.EasingFunction>
+                                                    <CubicEase EasingMode="EaseOut"/>
+                                                </PointAnimation.EasingFunction>
+                                            </PointAnimation>
+                                            <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.4" To="14.2801,9.75747" From="14.3088,1.32137" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Storyboard.TargetName="pathLaugh">
+                                                <PointAnimation.EasingFunction>
+                                                    <CubicEase EasingMode="EaseOut"/>
+                                                </PointAnimation.EasingFunction>
+                                            </PointAnimation>
+                                            <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.4" To="9.55523,9.75747"  From="9.58393,1.32137" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Storyboard.TargetName="pathLaugh">
+                                                <PointAnimation.EasingFunction>
+                                                    <CubicEase EasingMode="EaseOut"/>
+                                                </PointAnimation.EasingFunction>
+                                            </PointAnimation>
+                                            <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.4" To="18.1104,1.23483"  From="18.2857,1.4169" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="pathLaugh">
+                                                <PointAnimation.EasingFunction>
+                                                    <CircleEase EasingMode="EaseOut"/>
+                                                </PointAnimation.EasingFunction>
+                                            </PointAnimation>
+                                            <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.4" To="1,1.23483"  From="1,1.32205" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Storyboard.TargetName="pathLaugh">
+                                                <PointAnimation.EasingFunction>
+                                                    <CubicEase EasingMode="EaseOut"/>
+                                                </PointAnimation.EasingFunction>
+                                            </PointAnimation>
+                                            <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.4" To="4.83031,9.75747"  From="4.85901,1.32137" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Storyboard.TargetName="pathLaugh">
+                                                <PointAnimation.EasingFunction>
+                                                    <CubicEase EasingMode="EaseOut"/>
+                                                </PointAnimation.EasingFunction>
+                                            </PointAnimation>
+                                            <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="OnContentControl" d:IsOptimized="True"/>
+                                            <DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="OffContentControl" d:IsOptimized="True"/>
+                                            <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="PthTrail" d:IsOptimized="True"/>
+                                            <DoubleAnimation To="180" Duration="0" Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="PthTrail"/>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0" Value="0,3.36899"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="1.22296,3.53708"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0" Value="0,2.38096"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="1.22296,2.54905"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point1)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0" Value="0,1.39292"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="1.22296,1.56101"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0" Value="6.09528,2.47619"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="4.80196,2.54905"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point1)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0" Value="6.09528,3.46422"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="4.80196,3.53708"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point2)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0" Value="6.09528,1.48816"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="4.80196,1.56101"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point3)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0" Value="6.09528,2.47619"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="4.80196,2.54905"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0" Value="4.03598,1.71424"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="4.00077,4.33805"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0" Value="3.04767,1.71424"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="3.01246,4.33805"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0" Value="2.05936,1.71424"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="2.02415,4.33805"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point2)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0" Value="2.05936,0"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="2.02415,0.760046"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point3)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0" Value="3.04767,0"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="3.01246,0.760046"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point1)" Storyboard.TargetName="path1">
+                                                <EasingPointKeyFrame KeyTime="0" Value="4.03598,0"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="4.00077,0.760046"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0" Value="0,3.27375"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="1.10534,3.3466"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0" Value="0,2.28571"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="1.10534,2.35857"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point1)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0" Value="0,1.29768"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="1.10534,1.37053"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0" Value="6.14253,2.33333"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="4.68434,2.35857"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point1)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0" Value="6.14253,3.32136"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="4.68434,3.3466"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point2)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0" Value="6.14253,1.3453"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="4.68434,1.37053"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point3)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0" Value="6.14253,2.33333"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="4.68434,2.35857"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point2)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0" Value="1.96375,0"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="1.90653,0.56957"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point3)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0" Value="2.95206,0"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="2.89484,0.56957"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point1)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0" Value="3.94037,0"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="3.88315,0.56957"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0" Value="3.94037,1.57186"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="3.88315,4.14757"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0" Value="2.95206,1.57186"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="2.89484,4.14757"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Storyboard.TargetName="path2">
+                                                <EasingPointKeyFrame KeyTime="0" Value="1.96375,1.57186"/>
+                                                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="1.90653,4.14757"/>
+                                            </PointAnimationUsingKeyFrames>
+                                            <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.4" From="8.61904,1.32205" To="1.0287,6.96425" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)" Storyboard.TargetName="pathLaugh"/>
+                                            <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.4" From="13,1.36975" To="18.1391,6.96425" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point1)" Storyboard.TargetName="pathLaugh"/>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="pathLaugh">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualTransition>
+                                    <VisualTransition From="OnHover" GeneratedDuration="0" To="Off">
+                                        <VisualTransition.Storyboard>
+                                            <Storyboard>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="GrdButter">
+                                                    <EasingDoubleKeyFrame KeyTime="0" Value="70">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="78">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="RctTrailMask">
+                                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                                                        <DiscreteObjectKeyFrame.Value>
+                                                            <HorizontalAlignment>Left</HorizontalAlignment>
+                                                        </DiscreteObjectKeyFrame.Value>
+                                                    </DiscreteObjectKeyFrame>
+                                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.8">
+                                                        <DiscreteObjectKeyFrame.Value>
+                                                            <HorizontalAlignment>Left</HorizontalAlignment>
+                                                        </DiscreteObjectKeyFrame.Value>
+                                                    </DiscreteObjectKeyFrame>
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="RctTrailMask">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="104">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="GrdButter">
+                                                    <EasingDoubleKeyFrame KeyTime="0" Value="0">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="15">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="PthDropLeftA">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="5">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <CubicEase EasingMode="EaseOut"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="1.5">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <CubicEase EasingMode="EaseOut"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-2">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <CubicEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="PthDropLeftA">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="PthDropLeftA">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-10"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="PthDropLeftA">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-2"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="PthDropLeftB">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-5">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <CubicEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-1.5">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <CubicEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="2">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <CubicEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="2">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <CubicEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="PthDropLeftB">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="PthDropLeftB">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="10">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <CubicEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-10">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <CubicEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="PthDropLeftB">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <CubicEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-2">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <CubicEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" From="14.2801,9.75747" To="14.2801,1" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Storyboard.TargetName="path">
+                                                    <PointAnimation.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </PointAnimation.EasingFunction>
+                                                </PointAnimation>
+                                                <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" From="9.55523,9.75747"  To="9.55523,1" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                                                    <PointAnimation.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </PointAnimation.EasingFunction>
+                                                </PointAnimation>
+                                                <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" From="18.1104,1.23483"  To="18.1104, 7.68004" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="path">
+                                                    <PointAnimation.EasingFunction>
+                                                        <CircleEase EasingMode="EaseOut"/>
+                                                    </PointAnimation.EasingFunction>
+                                                </PointAnimation>
+                                                <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" From="1,1.23483"  To="1,7.68004" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                                                    <PointAnimation.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </PointAnimation.EasingFunction>
+                                                </PointAnimation>
+                                                <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" From="4.83031,9.75747"  To="4.83031,1" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Storyboard.TargetName="path">
+                                                    <PointAnimation.EasingFunction>
+                                                        <CubicEase EasingMode="EaseOut"/>
+                                                    </PointAnimation.EasingFunction>
+                                                </PointAnimation>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="OnContentControl">
+                                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="OffContentControl">
+                                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="PthTrail">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="1"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="PthTrail">
+                                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimation To="180" Duration="0" Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="PthTrail"/>
+                                            </Storyboard>
+                                        </VisualTransition.Storyboard>
+                                    </VisualTransition>
+                                    <VisualTransition From="OffHover" GeneratedDuration="0" To="On">
+                                        <VisualTransition.Storyboard>
+                                            <Storyboard>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="GrdButter">
+                                                    <EasingDoubleKeyFrame KeyTime="0" Value="0">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-10">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="70">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="RctTrailMask">
+                                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                                                        <DiscreteObjectKeyFrame.Value>
+                                                            <HorizontalAlignment>Right</HorizontalAlignment>
+                                                        </DiscreteObjectKeyFrame.Value>
+                                                    </DiscreteObjectKeyFrame>
+                                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.8">
+                                                        <DiscreteObjectKeyFrame.Value>
+                                                            <HorizontalAlignment>Right</HorizontalAlignment>
+                                                        </DiscreteObjectKeyFrame.Value>
+                                                    </DiscreteObjectKeyFrame>
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="RctTrailMask">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="104">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="PthTrail">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="1"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="PthTrail">
+                                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="GrdButter">
+                                                    <EasingDoubleKeyFrame KeyTime="0" Value="0">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-15">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <QuarticEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="PthDropRightA">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="5">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <CubicEase EasingMode="EaseOut"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="1.5">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <CubicEase EasingMode="EaseOut"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-2">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <CubicEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="PthDropRightA">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="PthDropRightA">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="10"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="PthDropRightA">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="2"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="PthDropRightB">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-5">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <CubicEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-1.5">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <CubicEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="2">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <CubicEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="2">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <CubicEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="PthDropRightB">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="PthDropRightB">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <CubicEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-10">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <CubicEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="PthDropRightB">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <CubicEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="2">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <CubicEase EasingMode="EaseIn"/>
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" To="14.2801,9.75747" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Storyboard.TargetName="path">
+                                                    <PointAnimation.EasingFunction>
+                                                        <CubicEase EasingMode="EaseIn"/>
+                                                    </PointAnimation.EasingFunction>
+                                                </PointAnimation>
+                                                <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" To="9.55523,9.75747" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                                                    <PointAnimation.EasingFunction>
+                                                        <CubicEase EasingMode="EaseIn"/>
+                                                    </PointAnimation.EasingFunction>
+                                                </PointAnimation>
+                                                <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" To="18.1104,1.23483" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="path">
+                                                    <PointAnimation.EasingFunction>
+                                                        <CircleEase EasingMode="EaseIn"/>
+                                                    </PointAnimation.EasingFunction>
+                                                </PointAnimation>
+                                                <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" To="1,1.23483" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                                                    <PointAnimation.EasingFunction>
+                                                        <CubicEase EasingMode="EaseIn"/>
+                                                    </PointAnimation.EasingFunction>
+                                                </PointAnimation>
+                                                <PointAnimation EnableDependentAnimation="True" Duration="0:0:0.8" To="4.83031,9.75747" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Storyboard.TargetName="path">
+                                                    <PointAnimation.EasingFunction>
+                                                        <CubicEase EasingMode="EaseIn"/>
+                                                    </PointAnimation.EasingFunction>
+                                                </PointAnimation>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="OnContentControl">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="OffContentControl">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimation To="0" Duration="0" Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="PthTrail"/>
+                                            </Storyboard>
+                                        </VisualTransition.Storyboard>
+                                    </VisualTransition>
                                 </VisualStateGroup.Transitions>
                                 <VisualState x:Name="Off">
                                     <VisualState.Setters>
@@ -451,6 +1294,14 @@
                                         <Setter Target="path.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Value="18.1104, 7.68004"/>
                                         <Setter Target="path.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Value="1, 7.68004"/>
                                         <Setter Target="path.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Value="4.83031,1"/>
+                                        <Setter Target="PthTrail.(UIElement.Visibility)" Value="Visible"/>
+                                        <Setter Target="RctTrailMask.(UIElement.Visibility)" Value="Visible"/>
+                                        <Setter Target="PthDropLeftA.(UIElement.Visibility)" Value="Visible"/>
+                                        <Setter Target="PthDropLeftB.(UIElement.Visibility)" Value="Visible"/>
+                                        <Setter Target="PthDropRightA.(UIElement.Visibility)" Value="Visible"/>
+                                        <Setter Target="PthDropRightB.(UIElement.Visibility)" Value="Visible"/>
+                                        <Setter Target="GrdButter.(UIElement.Opacity)" Value="1"/>
+                                        <Setter Target="rectangle.(UIElement.Opacity)" Value="1"/>
                                     </VisualState.Setters>
                                 </VisualState>
                                 <VisualState x:Name="On">
@@ -470,6 +1321,101 @@
                                         <Setter Target="path.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Value="1,1.23483"/>
                                         <Setter Target="path.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Value="4.83031,9.75747"/>
                                         <Setter Target="PthTrail.(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Value="-1"/>
+                                        <Setter Target="PthTrail.(UIElement.Visibility)" Value="Visible"/>
+                                        <Setter Target="RctTrailMask.(UIElement.Visibility)" Value="Visible"/>
+                                        <Setter Target="PthDropLeftA.(UIElement.Visibility)" Value="Visible"/>
+                                        <Setter Target="PthDropLeftB.(UIElement.Visibility)" Value="Visible"/>
+                                        <Setter Target="PthDropRightA.(UIElement.Visibility)" Value="Visible"/>
+                                        <Setter Target="PthDropRightB.(UIElement.Visibility)" Value="Visible"/>
+                                        <Setter Target="GrdButter.(UIElement.Opacity)" Value="1"/>
+                                        <Setter Target="rectangle.(UIElement.Opacity)" Value="1"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="OffHover">
+                                    <VisualState.Setters>
+                                        <Setter Target="path1.(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Value="-2"/>
+                                        <Setter Target="path2.(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Value="-2"/>
+                                        <Setter Target="path.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Value="11.0136,1"/>
+                                        <Setter Target="path.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Value="6.28875,1"/>
+                                        <Setter Target="path.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Value="1.56384,1"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="OnHover">
+                                    <VisualState.Setters>
+                                        <Setter Target="RctTrailMask.(UIElement.RenderTransformOrigin)">
+                                            <Setter.Value>
+                                                <foundation:Point>1,0.5</foundation:Point>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Setter Target="OnContentControl.Opacity" Value="1"/>
+                                        <Setter Target="OffContentControl.Opacity" Value="0"/>
+                                        <Setter Target="PthTrail.(UIElement.Projection).(PlaneProjection.RotationY)" Value="0"/>
+                                        <Setter Target="GrdButter.(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Value="70"/>
+                                        <Setter Target="path.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Value="14.2801,9.75747"/>
+                                        <Setter Target="path.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Value="9.55523,9.75747"/>
+                                        <Setter Target="path.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Value="18.1104,1.23483"/>
+                                        <Setter Target="path.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Value="1,1.23483"/>
+                                        <Setter Target="path.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Value="4.83031,9.75747"/>
+                                        <Setter Target="pathLaugh.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Value="14.3088,1.32137"/>
+                                        <Setter Target="pathLaugh.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Value="9.58393,1.32137"/>
+                                        <Setter Target="pathLaugh.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Value="18.2857,1.4169"/>
+                                        <Setter Target="pathLaugh.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Value="1,1.32205"/>
+                                        <Setter Target="pathLaugh.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Value="4.85901,1.32137"/>
+                                        <Setter Target="pathLaugh.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)" Value="8.61904,1.32205"/>
+                                        <Setter Target="pathLaugh.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point1)" Value="13,1.36975"/>
+
+                                        <Setter Target="path1.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)" Value="0,3.36899"/>
+                                        <Setter Target="path1.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Value="0,2.38096"/>
+                                        <Setter Target="path1.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point1)" Value="0,1.39292"/>
+                                        <Setter Target="path1.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Value="6.09528,2.47619"/>
+                                        <Setter Target="path1.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point1)" Value="6.09528,3.46422"/>
+                                        <Setter Target="path1.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point2)" Value="6.09528,1.48816"/>
+                                        <Setter Target="path1.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point3)" Value="6.09528,2.47619"/>
+                                        <Setter Target="path1.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Value="4.03598,1.71424"/>
+                                        <Setter Target="path1.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Value="3.04767,1.71424"/>
+                                        <Setter Target="path1.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Value="2.05936,1.71424"/>
+                                        <Setter Target="path1.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point2)" Value="2.05936,0"/>
+                                        <Setter Target="path1.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point3)" Value="3.04767,0"/>
+
+                                        <Setter Target="path2.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)" Value="0,3.27375"/>
+                                        <Setter Target="path2.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Value="0,2.28571"/>
+                                        <Setter Target="path2.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point1)" Value="0,1.29768"/>
+                                        <Setter Target="path2.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Value="6.14253,2.33333"/>
+                                        <Setter Target="path2.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point1)" Value="6.14253,3.32136"/>
+                                        <Setter Target="path2.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point2)" Value="6.14253,1.3453"/>
+                                        <Setter Target="path2.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point3)" Value="6.14253,2.33333"/>
+                                        <Setter Target="path2.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point2)" Value="1.96375,0"/>
+                                        <Setter Target="path2.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point3)" Value="2.95206,0"/>
+                                        <Setter Target="path2.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point1)" Value="3.94037,0"/>
+                                        <Setter Target="path2.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Value="3.94037,1.57186"/>
+                                        <Setter Target="path2.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Value="2.95206,1.57186"/>
+                                        <Setter Target="path2.(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Value="1.96375,1.57186"/>
+
+                                        <Setter Target="PthTrail.(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Value="-1"/>
+                                        <Setter Target="PthTrail.(UIElement.Visibility)" Value="Visible"/>
+                                        <Setter Target="RctTrailMask.(UIElement.Visibility)" Value="Visible"/>
+                                        <Setter Target="PthDropLeftA.(UIElement.Visibility)" Value="Visible"/>
+                                        <Setter Target="PthDropLeftB.(UIElement.Visibility)" Value="Visible"/>
+                                        <Setter Target="PthDropRightA.(UIElement.Visibility)" Value="Visible"/>
+                                        <Setter Target="PthDropRightB.(UIElement.Visibility)" Value="Visible"/>
+                                        <Setter Target="GrdButter.(UIElement.Opacity)" Value="1"/>
+                                        <Setter Target="rectangle.(UIElement.Opacity)" Value="1"/>
+                                        <Setter Target="pathLaugh.(UIElement.Opacity)" Value="1"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Disabled">
+                                    <VisualState.Setters>
+                                        <Setter Target="PthTrail.(UIElement.Visibility)" Value="Collapsed"/>
+                                        <Setter Target="RctTrailMask.(UIElement.Visibility)" Value="Collapsed"/>
+                                        <Setter Target="PthDropLeftA.(UIElement.Visibility)" Value="Collapsed"/>
+                                        <Setter Target="PthDropLeftB.(UIElement.Visibility)" Value="Collapsed"/>
+                                        <Setter Target="PthDropRightA.(UIElement.Visibility)" Value="Collapsed"/>
+                                        <Setter Target="PthDropRightB.(UIElement.Visibility)" Value="Collapsed"/>
+                                        <Setter Target="GrdButter.(UIElement.Opacity)" Value="0.5"/>
+                                        <Setter Target="rectangle.(UIElement.Opacity)" Value="0.9"/>
                                     </VisualState.Setters>
                                 </VisualState>
                             </VisualStateGroup>
@@ -485,9 +1431,9 @@
                         <ContentControl x:Name="HeaderContentControl" Content="{TemplateBinding HeaderContent}" Grid.ColumnSpan="2" Margin="{TemplateBinding HeaderMargin}" Style="{TemplateBinding HeaderStyle}"/>
                         <ContentControl x:Name="OnContentControl" Content="{TemplateBinding OnContent}" Grid.Column="0" Grid.Row="1" Margin="{TemplateBinding ContentMargin}" Style="{TemplateBinding ContentStyle}" Opacity="0"/>
                         <ContentControl x:Name="OffContentControl" Content="{TemplateBinding OffContent}" Grid.Column="0" Grid.Row="1" Margin="{TemplateBinding ContentMargin}" Style="{TemplateBinding ContentStyle}"/>
-                        <Viewbox Grid.Row="1" Grid.Column="1" Width="120" Height="42" >
+                        <Viewbox x:Name="viewbox" Grid.Row="1" Grid.Column="1" Width="120" Height="42" >
                             <Grid x:Name="GrdGraphics" Padding="8,4" Background="#00000000" Height="48" Width="128">
-                                <Rectangle StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeThickness="2" Fill="#FFFFF6CE" RadiusX="12" RadiusY="12" IsHitTestVisible="False"/>
+                                <Rectangle x:Name="rectangle" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeThickness="2" Fill="#FFFFF6CE" RadiusX="12" RadiusY="12" IsHitTestVisible="False"/>
                                 <Path x:Name="PthTrail" Data="M30.7736,1 L70.2264,1 C73.4151,1 76,3.05949 76,5.6 C76,6.79087 75.432,7.87603 74.5001,8.69294 L74.3481,8.82 L74.5001,8.94707 C75.432,9.76397 76,10.8492 76,12.04 C76,13.469 75.1821,14.7459 73.899,15.5895 L73.6907,15.72 L73.899,15.8505 C75.1821,16.6941 76,17.971 76,19.4 C76,21.9405 73.4151,24 70.2264,24 L54.8302,24 C51.6415,24 49.0566,21.9405 49.0566,19.4 C49.0566,18.3679 49.4832,17.4152 50.2036,16.6477 L50.2112,16.64 L39.434,16.64 C36.2453,16.64 33.6604,14.5805 33.6604,12.04 C33.6604,11.4048 33.8219,10.7998 34.1141,10.2495 L34.1422,10.2 L30.7736,10.2 C27.5849,10.2 25,8.14051 25,5.6 C25,3.05949 27.5849,1 30.7736,1 z M25,21.5 C25,20.2419 26.3431,19.222 28,19.222 L33,19.222 C34.6569,19.222 36,20.2419 36,21.5 C36,22.7581 34.6569,23.778 33,23.778 L28,23.778 C26.3431,23.778 25,22.7581 25,21.5 z M1,5.00001 C1,3.71153 2.79086,2.66701 5,2.66701 L12,2.66701 C14.2091,2.66701 16,3.71153 16,5.00001 C16,6.28848 14.2091,7.33301 12,7.33301 L5,7.33301 C2.79086,7.33301 1,6.28848 1,5.00001 z" Fill="{StaticResource ButterFill}" Height="20" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" Stroke="{StaticResource ButterStroke}" StrokeThickness="2" UseLayoutRounding="False" VerticalAlignment="Center" d:LayoutOverrides="LeftPosition, RightPosition" HorizontalAlignment="Center" Width="56" IsHitTestVisible="False" RenderTransformOrigin="0.5,0.5">
                                     <Path.Projection>
                                         <PlaneProjection/>
@@ -525,14 +1471,52 @@
                                     <Path Data="M1,13 C1,6.37258 6.37258,1 13,1 L44,1 C50.6274,1 56,6.37258 56,13 L56,44 C56,50.6274 50.6274,56 44,56 L13,56 C6.37258,56 1,50.6274 1,44 z" Fill="{StaticResource ButterFill}" HorizontalAlignment="Left" Height="34" Stretch="Fill" Stroke="{StaticResource ButterStroke}" StrokeThickness="2" VerticalAlignment="Top" Width="34" UseLayoutRounding="False" d:LayoutOverrides="LeftMargin, RightMargin" IsHitTestVisible="False"/>
                                     <Path Data="M325.972,288.342 C325.972,288.342 324.505,276.486 336.59,275.612" Stretch="Fill" Stroke="White" StrokeThickness="4" UseLayoutRounding="False" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Width="7.577" Height="8.765" HorizontalAlignment="Left" Margin="3.516,2.735,0,0" VerticalAlignment="Top" IsHitTestVisible="False"/>
                                     <Path Data="M4,2 C4,3.10457 3.10457,4 2,4 C0.895431,4 0,3.10457 0,2 C0,0.895431 0.895431,0 2,0 C3.10457,0 4,0.895431 4,2 z" Fill="White" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" StrokeThickness="0" UseLayoutRounding="False" Width="2.386" Height="2.386" HorizontalAlignment="Left" Margin="3.578,13.123,0,0" VerticalAlignment="Top" IsHitTestVisible="False" />
-                                    <Path Data="M6,3 C6,4.65685 4.65685,6 3,6 C1.34315,6 0,4.65685 0,3 C0,1.34315 1.34315,0 3,0 C4.65685,0 6,1.34315 6,3 z" Fill="{StaticResource ButterStroke}" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" StrokeThickness="0" UseLayoutRounding="False" Width="3.579" Height="3.578" HorizontalAlignment="Left" Margin="9.842,10.141,0,0" VerticalAlignment="Top" IsHitTestVisible="False"/>
-                                    <Path Data="M6,3 C6,4.65685 4.65685,6 3,6 C1.34315,6 0,4.65685 0,3 C0,1.34315 1.34315,0 3,0 C4.65685,0 6,1.34315 6,3 z" Fill="{StaticResource ButterStroke}" HorizontalAlignment="Left" StrokeStartLineCap="Round" Stretch="Fill" StrokeEndLineCap="Round" StrokeThickness="0" UseLayoutRounding="False" Width="3.579" Height="3.578" Margin="21.772,10.141,0,0" VerticalAlignment="Top" IsHitTestVisible="False"/>
-                                    <Path x:Name="path" HorizontalAlignment="Left" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stroke="{StaticResource ButterStroke}" StrokeThickness="2" VerticalAlignment="Top" UseLayoutRounding="False" Width="19.111" Height="10.218" Margin="7.743,17.32,0,0" IsHitTestVisible="False" >
+                                    <Path x:Name="path1" Fill="{StaticResource ButterStroke}" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeThickness="0" UseLayoutRounding="False" Width="6.095" Height="4.338" HorizontalAlignment="Left" Margin="8.619,9.381,0,0" VerticalAlignment="Top" IsHitTestVisible="False" RenderTransformOrigin="0.5,0.5">
                                         <Path.Data>
                                             <PathGeometry FillRule="EvenOdd">
-                                                <PathFigure IsFilled="True" IsClosed="False" StartPoint="18.1104,7.68004">
-                                                    <BezierSegment Point3="9.55522,1" Point2="14.2801,1" Point1="18.1104,5.94177"/>
-                                                    <BezierSegment Point3="1,7.68004" Point2="1,5.94177" Point1="4.83031,1"/>
+                                                <PathFigure IsFilled="True" IsClosed="True" StartPoint="4.80196,2.54905">
+                                                    <BezierSegment Point3="3.01246,4.33805" Point2="4.00077,4.33805" Point1="4.80196,3.53708"/>
+                                                    <BezierSegment Point3="1.22296,2.54905" Point2="1.22296,3.53708" Point1="2.02415,4.33805"/>
+                                                    <BezierSegment Point3="3.01246,0.760046" Point2="2.02415,0.760046" Point1="1.22296,1.56101"/>
+                                                    <BezierSegment Point3="4.80196,2.54905" Point2="4.80196,1.56101" Point1="4.00077,0.760046"/>
+                                                </PathFigure>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                        <Path.RenderTransform>
+                                            <CompositeTransform/>
+                                        </Path.RenderTransform>
+                                    </Path>
+                                    <Path x:Name="path2" Fill="{StaticResource ButterStroke}" HorizontalAlignment="Left" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeThickness="0" UseLayoutRounding="False" Width="6.143" Height="4.148" Margin="20.667,9.571,0,0" VerticalAlignment="Top" IsHitTestVisible="False" RenderTransformOrigin="0.5,0.5">
+                                        <Path.Data>
+                                            <PathGeometry FillRule="EvenOdd">
+                                                <PathFigure IsFilled="True" IsClosed="True" StartPoint="4.68434,2.35857">
+                                                    <BezierSegment Point3="2.89484,4.14757" Point2="3.88315,4.14757" Point1="4.68434,3.3466"/>
+                                                    <BezierSegment Point3="1.10534,2.35857" Point2="1.10534,3.3466" Point1="1.90653,4.14757"/>
+                                                    <BezierSegment Point3="2.89484,0.56957" Point2="1.90653,0.56957" Point1="1.10534,1.37053"/>
+                                                    <BezierSegment Point3="4.68434,2.35857" Point2="4.68434,1.37053" Point1="3.88315,0.56957"/>
+                                                </PathFigure>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                        <Path.RenderTransform>
+                                            <CompositeTransform/>
+                                        </Path.RenderTransform>
+                                    </Path>
+                                    <Path x:Name="path" HorizontalAlignment="Left" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stroke="{StaticResource ButterStroke}" StrokeThickness="2" VerticalAlignment="Top" UseLayoutRounding="False" Width="19.111" Height="10.268" Margin="7.743,17.27,0,0" IsHitTestVisible="False" >
+                                        <Path.Data>
+                                            <PathGeometry FillRule="EvenOdd">
+                                                <PathFigure IsFilled="True" IsClosed="False" StartPoint="18.1104,7.7302">
+                                                    <BezierSegment Point3="9.55522,1.05016" Point2="14.2801,1.05016" Point1="18.1104,5.99193"/>
+                                                    <BezierSegment Point3="1,7.7302" Point2="1,5.99193" Point1="4.83031,1.05016"/>
+                                                </PathFigure>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path>
+                                    <Path x:Name="pathLaugh" HorizontalAlignment="Left" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stroke="{StaticResource ButterStroke}" StrokeThickness="2" VerticalAlignment="Top" UseLayoutRounding="False" Width="19.286" Height="11.241" Margin="7.714,16.297,0,0" IsHitTestVisible="False" Opacity="0" >
+                                        <Path.Data>
+                                            <PathGeometry FillRule="EvenOdd">
+                                                <PathFigure IsFilled="True" IsClosed="False" StartPoint="18.1391,8.70252">
+                                                    <BezierSegment Point3="9.58392,2.02248" Point2="14.3088,2.02248" Point1="18.1391,6.96425"/>
+                                                    <BezierSegment Point3="1.0287,8.70252" Point2="1.0287,6.96425" Point1="4.85901,2.02248"/>
                                                 </PathFigure>
                                             </PathGeometry>
                                         </Path.Data>
