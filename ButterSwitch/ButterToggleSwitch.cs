@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -33,6 +33,20 @@ namespace ButterSwitch
         public static readonly DependencyProperty IsOnProperty =
             DependencyProperty.Register("IsOn", typeof(bool), typeof(ButterToggleSwitch),
                 new PropertyMetadata(false, OnToggled));
+
+        /// <summary>Identifies the IsEnabled dependency property.</summary>
+        /// <returns>The identifier for the IsEnabled dependency property.</returns>
+        public new bool IsEnabled
+        {
+            get { return (bool)GetValue(IsEnabledProperty); }
+            set { SetValue(IsEnabledProperty, value); }
+        }
+
+        /// <summary>Identifies the IsEnabled dependency property.</summary>
+        /// <returns>The identifier for the IsEnabled dependency property.</returns>
+        public new static readonly DependencyProperty IsEnabledProperty =
+            DependencyProperty.Register("IsEnabled", typeof(bool), typeof(ButterToggleSwitch),
+                new PropertyMetadata(true, OnIsEnabledChanged));
 
         /// <summary>Provides the object content that should be displayed using the OnContentTemplate when this ToggleSwitch has state of On.</summary>
         /// <returns>The object content. In some cases this is a string, in other cases it is a single element that provides a root for further composition content. Probably the most common set usage is to place a binding here.</returns>
@@ -164,8 +178,13 @@ namespace ButterSwitch
             _grdGraphics = GetTemplateChild("GrdGraphics") as Grid;
             _toggleStatesGroup = GetTemplateChild("ToggleStates") as VisualStateGroup;
 
+            if (_grdGraphics == null || _toggleStatesGroup == null)
+                return;
+
             _toggleStatesGroup.CurrentStateChanged += _toggleStatesGroup_CurrentStateChanged;
             _grdGraphics.Tapped += _grdGraphics_Tapped;
+            _grdGraphics.PointerEntered += _grdGraphics_PointerEntered;
+            _grdGraphics.PointerExited += _grdGraphics_PointerExited;
 
             if (this.IsOn)
             {
@@ -182,6 +201,38 @@ namespace ButterSwitch
             Toggled?.Invoke(this, new RoutedEventArgs());
         }
 
+        private void _grdGraphics_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            if (!IsEnabled)
+                return;
+
+            if (this.IsOn)
+            {
+                VisualStateManager.GoToState(this, "On", true);
+            }
+            else
+            {
+                _isAnimationOnRunning = true;
+                VisualStateManager.GoToState(this, "Off", true);
+            }
+        }
+
+        private void _grdGraphics_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            if (!IsEnabled)
+                return;
+
+            if (this.IsOn)
+            {
+                VisualStateManager.GoToState(this, "OnHover", true);
+            }
+            else
+            {
+                _isAnimationOnRunning = true;
+                VisualStateManager.GoToState(this, "OffHover", true);
+            }
+        }
+
         private void _toggleStatesGroup_CurrentStateChanged(object sender, VisualStateChangedEventArgs e)
         {
             _isAnimationOnRunning = false;
@@ -190,8 +241,45 @@ namespace ButterSwitch
 
         private void _grdGraphics_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            if (!IsEnabled)
+                return;
+
             if (!_isAnimationOnRunning)
                 IsOn = !IsOn;
+        }
+
+        private static void OnIsEnabledChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            if (e.NewValue == null)
+                return;
+
+            if (e.NewValue == e.OldValue)
+                return;
+
+            ButterToggleSwitch instance = d as ButterToggleSwitch;
+
+            if (instance == null)
+                return;
+
+            if (instance.IsEnabled)
+            {
+                if (instance.IsOn)
+                {
+                    VisualStateManager.GoToState(instance, "On", false);
+                    instance._isAnimationOnRunning = false;
+
+                }
+                else
+                {
+                    VisualStateManager.GoToState(instance, "Off", false);
+                    instance._isAnimationOnRunning = false;
+                }
+            }
+            else
+            {
+                VisualStateManager.GoToState(instance, "Disabled", false);
+                instance._isAnimationOnRunning = false;
+            }
         }
 
         private static void OnToggled(DependencyObject d, DependencyPropertyChangedEventArgs e)
