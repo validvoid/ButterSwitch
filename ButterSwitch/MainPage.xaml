@@ -1,14 +1,37 @@
-﻿<Page
+<Page
     x:Class="ButterSwitch.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ButterSwitch"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" d:DesignWidth="421.5" d:DesignHeight="290">
+    mc:Ignorable="d" d:DesignWidth="505.245" d:DesignHeight="334.377">
     <Page.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Themes/ToggleSwitch.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Standalone Control" HorizontalAlignment="Center" Margin="0,12"/>
+        <local:ButterToggleSwitch x:Name="butterToggleSwitch" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="12,36" IsEnabled="{Binding IsChecked, ElementName=checkBoxStandalone}" Grid.Row="1"/>
+        <CheckBox x:Name="checkBoxStandalone" Content="IsEnabled" HorizontalAlignment="Center" VerticalAlignment="Stretch" Grid.Row="2" Margin="0,12" IsChecked="True"/>
+        <TextBlock Text="Built-in Control" Grid.Column="1" HorizontalAlignment="Center" Margin="0,12"/>
+        <ToggleSwitch x:Name="toggleSwitch" Style="{StaticResource ButterToggleSwitchStyle}"  Header="Header" HorizontalAlignment="Center"  Grid.Row="1" Grid.Column="1" Margin="12,36" IsEnabled="{Binding IsChecked, ElementName=checkBoxBuiltin}"></ToggleSwitch>
+        <CheckBox x:Name="checkBoxBuiltin" Content="IsEnabled" HorizontalAlignment="Center" VerticalAlignment="Stretch" Grid.Row="2" Margin="0,12" Grid.Column="1" IsChecked="True"/>
+    </Grid>
+</Page>
+
                 <ResourceDictionary Source="/Themes/ToggleSwitch.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
